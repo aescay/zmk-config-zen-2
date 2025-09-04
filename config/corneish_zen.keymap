@@ -14,6 +14,7 @@
 #define _SYMBOLS 2
 #define _NUMBERS 3
 #define _WINDOW 4
+#define _BLUETOOTH 5
 
 / {
     chosen {
@@ -30,6 +31,13 @@
             #binding-cells = <0>;
             tapping-term-ms = <240>;
             bindings = <&kp LSHFT>, <&kp CAPS>;
+        };
+        td_bt: tap_dance_bluetooth {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_BLUETOOTH";
+            #binding-cells = <0>;
+            tapping-term-ms = <240>;
+            bindings = <&none>, <&to _BLUETOOTH>;
         };
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -68,10 +76,10 @@
 // |      |     |     |           |      | LSFT(ALT) |   |      |          |          |      |     |      |
 //                    | LSFT(CTL) | CLMK |           |   | RGUI |          |          |
             bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4   &kp LG(LBKT) &kp LC(LS(TAB)) &kp LC(TAB) &kp LG(RBKT) &none &trans
+&trans     &none        &none        &none         &none        &none          &kp LG(LBKT) &kp LC(LS(TAB)) &kp LC(TAB) &kp LG(RBKT) &none &trans
 &trans     &none        &none        &none         &none        &none          &kp LEFT     &kp DOWN        &kp UP      &kp RIGHT    &none &none
 &none      &none        &none        &none         &none        &kp LS(LALT)   &none        &none           &none       &none        &none &trans
-                                     &kp LS(LCTRL) &to _COLEMAK &none          &kp RGUI     &none           &none
+                                     &kp LS(LCTRL) &to _COLEMAK &none          &kp RGUI     &td_bt          &none
             >;
         };
 
@@ -117,6 +125,21 @@
 &none      &none &kp LA(LC(LEFT))     &kp LA(LC(DOWN)) &kp LA(LC(RIGHT))     &none   &none &kp LA(LC(J)) &kp LA(LC(K)) &none &none &none
 &sys_reset &none &none                &none            &none                 &none   &none &none         &none         &none &none &trans
                                      &none            &to _COLEMAK          &none   &none &none         &none
+            >;
+        };
+
+        bluetooth_layer {
+            display-name = "BLUETOOTH";
+// -----------------------------------------------------------------------------------------
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     | CLMK|     |   |     |     |     |
+            bindings = <
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none &none &none &none &none &trans
+&trans     &none        &none        &none        &none        &none          &none &none &none &none &none &none
+&none      &none        &none        &none        &none        &none          &none &none &none &none &none &trans
+                                     &none        &to _COLEMAK &none          &none &none &none
             >;
         };
     };
