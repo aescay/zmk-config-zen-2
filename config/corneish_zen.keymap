@@ -54,7 +54,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "COLEMAK";
+            display-name = "COLMK";
 // -----------------------------------------------------------------------------------------
 // |  ESC |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BSPC |
 // |  TAB |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
@@ -71,20 +71,20 @@
         move_layer {
             display-name = "MOVE";
 // -----------------------------------------------------------------------------------------
-// | BTCLR| BT1 | BT2 |    BT3    | BT4  | BT5       |   | PREV | PREV_TAB | NEXT_TAB | NEXT |     |      |
-// |      |     |     |           |      |           |   | LFT  | DWN      |  UP      | RGT  |     |      |
-// |      |     |     |           |      | LSFT(ALT) |   |      |          |          |      |     |      |
-//                    | LSFT(CTL) | CLMK |           |   | RGUI |          |          |
+// |      |     |     |     |      |     |   | PREV | PREV_TAB | NEXT_TAB | NEXT |     |      |
+// |      |     |CTRL | ALT | GUI  |     |   | LFT  | DWN      |  UP      | RGT  |     |      |
+// |      |     |     |     |      |     |   |      |          |          |      |     |      |
+//                    |     | CLMK | CPS |   | RGUI |    BT    |     |
             bindings = <
 &trans     &none        &none        &none         &none        &none          &kp LG(LBKT) &kp LC(LS(TAB)) &kp LC(TAB) &kp LG(RBKT) &none &trans
-&trans     &none        &none        &none         &none        &none          &kp LEFT     &kp DOWN        &kp UP      &kp RIGHT    &none &none
-&none      &none        &none        &none         &none        &kp LS(LALT)   &none        &none           &none       &none        &none &trans
-                                     &kp LS(LCTRL) &to _COLEMAK &none          &kp RGUI     &td_bt          &none
+&trans     &none        &kp LCTRL    &kp LALT      &kp LGUI     &none          &kp LEFT     &kp DOWN        &kp UP      &kp RIGHT    &none &none
+&none      &none        &none        &none         &none        &none          &none        &none           &none       &none        &none &trans
+                                     &none         &to _COLEMAK &td_caps       &kp RGUI     &td_bt          &none
             >;
         };
 
         symbol_layer {
-            display-name = "SYMBOLS";
+            display-name = "SYMBL";
 // -----------------------------------------------------------------------------------------
 // |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |     |     |      |
 // |      |  ~  |  =  |  -  |  _  |  `  |   |  \  |  (  |  )  | "|" |     |      |
@@ -99,7 +99,7 @@
         };
 
         number_layer {
-            display-name = "NUMBERS";
+            display-name = "NUMBR";
 // -----------------------------------------------------------------------------------------
 // |    |     | PLY | PRV | NXT |     |   |  +  |  7  |  8  |  9  |  -  |      |
 // |    |     |     | VLD | VLU |     |   |  *  |  4  |  5  |  6  |  /  |      |
@@ -114,7 +114,7 @@
         };
 
         window_layer {
-            display-name = "WINDOW";
+            display-name = "WINDW";
 // -----------------------------------------------------------------------------------------
 // | PSCRN|     | LWIN | TOP  | RWIN  |     |   |     |  Q4 |  Q1 |   |     |      |
 // |      |     | LEFT | DOWN | RIGHT |     |   |     |  Q3 |  Q2 |   |     |      |
@@ -129,7 +129,7 @@
         };
 
         bluetooth_layer {
-            display-name = "BLUETOOTH";
+            display-name = "BT";
 // -----------------------------------------------------------------------------------------
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
