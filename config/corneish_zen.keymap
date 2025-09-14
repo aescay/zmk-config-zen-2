@@ -136,7 +136,7 @@
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     | CLMK|     |   |     |     |     |
             bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none &none &none &none &none &studio
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none &none &none &none &none &studio_unlock
 &trans     &none        &none        &none        &none        &none          &none &none &none &none &none &none
 &none      &none        &none        &none        &none        &none          &none &none &none &none &none &trans
                                      &none        &to _COLEMAK &none          &none &none &none
