@@ -73,12 +73,12 @@
 // -----------------------------------------------------------------------------------------
 // |      |     |     |     |      |     |   | PREV | PREV_TAB | NEXT_TAB | NEXT |     |      |
 // |      |     |CTRL | ALT | GUI  |     |   | LFT  | DWN      |  UP      | RGT  |     |      |
-// |      |     |     |     |      |     |   |      |          |          |      |     |      |
+// |      |     |     |     |      |     |   | 1    | 2        | 3        | 4    | 5   |      |
 //                    |     | CLMK | CPS |   | RGUI |    BT    |     |
             bindings = <
 &trans     &none        &none        &none         &none        &none          &kp LG(LBKT) &kp LC(LS(TAB)) &kp LC(TAB) &kp LG(RBKT) &none &trans
 &trans     &none        &kp LCTRL    &kp LALT      &kp LGUI     &none          &kp LEFT     &kp DOWN        &kp UP      &kp RIGHT    &none &none
-&none      &none        &none        &none         &none        &none          &none        &none           &none       &none        &none &trans
+&none      &none        &none        &none         &none        &none          &kp N1       &kp N2          &kp N3      &kp N4       &kp N5  &trans
                                      &none         &to _COLEMAK &td_caps       &kp RGUI     &td_bt          &none
             >;
         };
@@ -131,12 +131,12 @@
         bluetooth_layer {
             display-name = "BT";
 // -----------------------------------------------------------------------------------------
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     | STUDIO|
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     | CLMK|     |   |     |     |     |
             bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none &none &none &none &none &trans
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none &none &none &none &none &studio
 &trans     &none        &none        &none        &none        &none          &none &none &none &none &none &none
 &none      &none        &none        &none        &none        &none          &none &none &none &none &none &trans
                                      &none        &to _COLEMAK &none          &none &none &none
