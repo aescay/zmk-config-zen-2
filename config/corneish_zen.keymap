@@ -43,7 +43,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "COLMK-ALT";
+            display-name = "aescay";
 // -----------------------------------------------------------------------------------------
 // | TAB  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  |  ESC |
 // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  LWR/'|
