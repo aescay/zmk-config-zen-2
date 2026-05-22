@@ -69,12 +69,12 @@
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
 // |  ESC |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ENT  |
-//                    | DEL | ESC | BSPC|   | SPC | TAB | RET |
+//                    | DEL |BSPC | ESC |   | TAB | SPC | RET |
             bindings = <
 &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
 &kp ESC   &bhs LSHFT A &bhm LCTRL S &bhm LALT D &bhm LGUI F &kp G   &kp H &bhm RGUI J  &bhm RALT K     &bhm RCTRL L   &bhs RSHFT SEMI &kp SQT
 &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RET
-               &th AERO DEL &th NAV ESC &th MEDIA BSPC  &th SYM SPACE &th NUM TAB &sth SYSTEM RET
+               &th MEDIA DEL &th NUM BSPC &th NAV ESC  &th AERO TAB &th SYM SPACE &sth SYSTEM RET
             >;
         };
 
@@ -114,12 +114,12 @@
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
+//                    |     |     |     |   |     |BSPC |     |
             bindings = <
 &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
 &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-                        &trans &trans &trans  &trans &trans &trans
+                        &trans &trans &trans  &trans &kp BSPC &trans
             >;
         };
 
