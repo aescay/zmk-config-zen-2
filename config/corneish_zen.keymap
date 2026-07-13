@@ -82,9 +82,9 @@
 //                    | DEL | ESC | BSPC|   | SPC | TAB | RET |
             bindings = <
 &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-&kp ESC   &bhs LSHFT A &bhm LCTRL S &bhm LALT D &bhm LGUI F &kp G   &kp H &bhm RGUI J  &bhm RALT K     &bhm RCTRL L   &bhs RSHFT SEMI &kp SQT
+&kp ESC   &bhs LSHFT A &bhm LCTRL S &bhm LALT D &bhm LGUI F &kp G   &kp H &bhm LGUI J  &bhm RALT K     &bhm RCTRL L   &bhs RSHFT SEMI &kp SQT
 &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RET
-               &th MEDIA DEL &fth NUM ESC &th NAV BSPC  &th AERO SPACE &fth SYM TAB &sth SYSTEM RET
+               &th MEDIA DEL &fth NUM ESC &th NAV BSPC  &th RGUI SPACE &fth SYM TAB &sth SYSTEM RET
             >;
         };
 
