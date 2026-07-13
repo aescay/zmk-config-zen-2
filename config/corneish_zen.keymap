@@ -88,21 +88,6 @@
             >;
         };
 
-        aero_layer {
-            display-name = "AERO";
-// -----------------------------------------------------------------------------------------------------
-// |      | A+1 | A+2 | A+3 | A+4 | A+5 |   | A+6 | A+7 | A+8 | A+9 | A+0 |      |
-// |      |     |     |     |     |     |   | A+L | A+D | A+U | A+R |     |      |
-// |      | AS1 | AS2 | AS3 | AS4 | AS5 |   | AS6 | AS7 | AS8 | AS9 | AS0 |      |
-//                    |     |     |     |   |     |     |     |
-            bindings = <
-&trans &kp LA(N1)       &kp LA(N2)       &kp LA(N3)       &kp LA(N4)       &kp LA(N5)       &kp LA(N6)       &kp LA(N7)       &kp LA(N8)       &kp LA(N9)       &kp LA(N0)       &trans
-&trans &trans           &trans           &trans           &trans           &trans           &kp LA(LEFT)     &kp LA(DOWN)     &kp LA(UP)       &kp LA(RIGHT)    &trans           &trans
-&trans &kp LS(LA(N1))   &kp LS(LA(N2))   &kp LS(LA(N3))   &kp LS(LA(N4))   &kp LS(LA(N5))   &kp LS(LA(N6))   &kp LS(LA(N7))   &kp LS(LA(N8))   &kp LS(LA(N9))   &kp LS(LA(N0))   &trans
-                                                   &trans &trans &trans    &trans &trans &trans
-            >;
-        };
-
         nav_layer {
             display-name = "NAV";
 // -----------------------------------------------------------------------------------------
